@@ -1,0 +1,51 @@
+sistema stock usuarios creados
+
+
+POST http://localhost:8080/api/auth/registro
+
+{
+  "nombre": "Ceciur",
+  "apellido": "Leader",
+  "dni": "34554789",
+  "direccion": "Calle Admin 1",
+  "telefono": "1122334455",
+  "email": "adminproductos@ejemplo.com",
+  "password": "Admin1234!",
+  "rol": "ADMIN"
+}
+{
+    "nombre": "Sofia",
+    "apellido": "Gomez",
+    "dni": "35876543",
+    "direccion": "Av. Las Flores 1234",
+    "telefono": "1160007777",
+    "email": "sofia.gestor@stocksys.com",
+    "password": "PasswordSeguro123",
+    "rol": "GESTOR"
+}
+
+{
+  "nombre": "Ceci",
+  "apellido": "Administradora",
+  "dni": "34567890",
+  "direccion": "Calle Falsa 123",
+  "telefono": "1122334455",
+  "email": "admin2@ejemplo.com",
+  "password": "Admin1234!",
+  "rol": "ADMIN"
+}
+
+usaurio comun
+
+{
+  "nombre": "Juan",
+  "apellido": "Perez",
+  "dni": "12345678",
+  "direccion": "Calle Falsa 123",
+  "telefono": "1122334455",
+  "email": "juan@ejemplo.com",
+  "password": "Usuario1234!"
+}
+
+login
+http://localhost:8080/api/auth/login
