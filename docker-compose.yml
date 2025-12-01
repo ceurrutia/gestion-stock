@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+
+  mysql:
+    image: mysql:8
+    container_name: mysql-stock
+    restart: always
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: sistema_stock
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - stock-net
+
+  stock-app:
+    image: stock-system
+    container_name: stock-system
+    depends_on:
+      - mysql
+    env_file:
+      - .env
+    ports:
+      - "8080:8080"
+    networks:
+      - stock-net
+
+volumes:
+  mysql_data:
+
+networks:
+  stock-net:
